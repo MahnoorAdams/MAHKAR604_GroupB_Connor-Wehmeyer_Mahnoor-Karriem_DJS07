@@ -1,13 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Meme Generator</title>
+    <!-- Add global styles -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body>
+    <!-- React app root -->
     <div id="root"></div>
+
+    <!-- Add a fallback image -->
+    <div style="display: none;">
+      <img src="/src/images/Troll_face_1.png" alt="Fallback Meme" id="fallback-image" />
+    </div>
+
+    <!-- Load the React app -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
